@@ -2,13 +2,9 @@ pipeline {
   agent any
   stages {
     stage('Say Hello') {
-      parallel {
-        stage('Say Hello') {
-          steps {
-            echo 'Hello World'
-            sh 'java -version'
-          }
-        }
+      steps {
+        echo 'Hello World!'
+        sh 'java -version'
       }
     }
   }
